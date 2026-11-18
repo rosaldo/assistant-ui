@@ -1,5 +1,15 @@
 # @assistant-ui/core
 
+## 0.3.38
+
+### Patch Changes
+
+- [#10714](https://github.com/assistant-ui/assistant-ui/pull/10714) [`ac873e5`](https://github.com/assistant-ui/assistant-ui/commit/ac873e5d3aded57180cbb8f2ec17fa109db6e4cd) - RuntimeExtras gains `useExtras`, which the React Compiler recognizes as a hook, and `use` is deprecated. ([@okisdev](https://github.com/okisdev))
+
+- [#10578](https://github.com/assistant-ui/assistant-ui/pull/10578) [`9906ce6`](https://github.com/assistant-ui/assistant-ui/commit/9906ce658c309e57b138c5232f2fb1b09cdb55f8) - Honor `disabled: true` when a frontend tool is called. Until now `disabled` only kept the tool's schema from the model. A call that names a disabled tool now gets the error result `Tool "<name>" is disabled.` and `execute` and `streamCall` do not run, including for tools that only define `streamCall`. Frame tools behave the same way. Set `disabled: false` to run the tool again. ([@Yonom](https://github.com/Yonom))
+- Updated dependencies [[`9906ce6`](https://github.com/assistant-ui/assistant-ui/commit/9906ce658c309e57b138c5232f2fb1b09cdb55f8), [`709a0cc`](https://github.com/assistant-ui/assistant-ui/commit/709a0cc74b14b6196b9e9466ecac58b502ae70e5)]:
+  - assistant-stream@0.3.59
+
 ## 0.3.37
 
 ### Patch Changes
